@@ -1,4 +1,4 @@
-name: Recovery Build
+name: Recovery Build Mod
 
 on:
   workflow_dispatch:
@@ -14,11 +14,11 @@ on:
       DEVICE_TREE_URL:
         description: 'DEVICE_TREE_URL'
         required: true
-        default: 'https://github.com/AirysDark/android_device_LG_LM-V500'
+        default: 'https://github.com/TeamWin/android_device_asus_I003D'
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
-        default: 'android-11'
+        default: 'android-12.1'
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
@@ -101,11 +101,11 @@ jobs:
         mkdir workspace
         cd workspace
         echo "workspace-folder=$(pwd)" >> $GITHUB_OUTPUT
-        git config --global user.name "AirysDark"
-        git config --global user.email "megamanx2sonic@gmail.com"
+        git config --global user.name "Nico170420"
+        git config --global user.email "b170420nc@gmail.com"
         repo init --depth=1 -u ${{ github.event.inputs.MANIFEST_URL }} -b ${{ github.event.inputs.MANIFEST_BRANCH }}
       id: pwd
-          
+
     - name: Repo Sync
       run: |
         repo sync -j$(nproc --all) --force-sync
@@ -154,7 +154,7 @@ jobs:
     - name: Upload to Release
       uses: softprops/action-gh-release@v1
       with:
-        files: workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/${{ github.event.inputs.BUILD_TARGET }}.img
+        files: workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/*.img
         name: ${{ github.event.inputs.DEVICE_NAME }}-${{ github.run_id }}
         tag_name: ${{ github.run_id }}
         body: |
