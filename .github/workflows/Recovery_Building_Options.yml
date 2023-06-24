@@ -35,7 +35,7 @@ on:
       DEVICE_TREE_URL:
         description: 'DEVICE_TREE_URL'
         required: true
-        default: 'https://github.com/TeamWin/android_device_asus_I003D'
+        default: 'https://github.com/AirysDark/android_device_LG_LM-V500'
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
@@ -43,7 +43,7 @@ on:
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
-        default: 'device/asus/I003D'
+        default: 'device/lge/flashlmdd'
 #      COMMON_TREE_URL:
 #        description: 'COMMON_TREE_URL (if no common tree, leave blank)'
 #        required: false
@@ -53,7 +53,7 @@ on:
       DEVICE_NAME:
         description: 'DEVICE_NAME'
         required: true
-        default: 'I003D'
+        default: 'flashlmdd'
       MAKEFILE_NAME:
         description: 'MAKEFILE_NAME (you need to know the correct branch to use coming from each Organization)'
         required: true
