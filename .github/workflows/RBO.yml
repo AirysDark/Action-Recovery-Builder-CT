@@ -1,4 +1,4 @@
-name: Recovery Build Organizations
+name: RBO
 
 on:
   workflow_dispatch:
