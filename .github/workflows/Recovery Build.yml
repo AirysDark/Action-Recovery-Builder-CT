@@ -22,7 +22,7 @@ on:
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
-        default: 'evice/LGE/REL'
+        default: 'device/lge/flashlmdd'
       COMMON_TREE_URL:
         description: 'COMMON_TREE_URL (if no common tree, leave blank)'
         required: false
@@ -32,11 +32,11 @@ on:
       DEVICE_NAME:
         description: 'DEVICE_NAME'
         required: true
-        default: 'REL'
+        default: 'flashlmdd'
       MAKEFILE_NAME:
         description: 'MAKEFILE_NAME'
         required: true
-        default: 'twrp_REL'
+        default: 'twrp_flashlmdd'
       BUILD_TARGET:
         description: 'BUILD_TARGET'
         required: true
